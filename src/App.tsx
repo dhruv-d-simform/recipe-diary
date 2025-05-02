@@ -1,5 +1,13 @@
+import HomePage from '@/pages/HomePage.tsx';
+import Header from '@/components/Header.tsx';
+
 function App() {
-    return <h1>RecipeDiary</h1>;
+    return (
+        <div>
+            <Header />
+            <HomePage />
+        </div>
+    );
 }
 
 export default App;
