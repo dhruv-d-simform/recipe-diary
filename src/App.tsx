@@ -5,7 +5,9 @@ function App() {
     return (
         <div>
             <Header />
-            <HomePage />
+            <div className="w-full max-w-[100rem] m-auto pt-16">
+                <HomePage />
+            </div>
         </div>
     );
 }
