@@ -8,12 +8,12 @@ interface RecipeCardProps {
 function RecipeCard({ recipe }: RecipeCardProps) {
     return (
         <div className="p-8">
-            <div className="relative bg-white text-black border-2 border-primary rounded-2xl flip-container">
+            <div className="relative bg-white text-black border-2 border-primary rounded-3xl flip-container">
                 <Img
                     src={recipe.image}
                     alt={recipe.name}
                     classNameContainer="flip-target w-full aspect-square scale-110 rounded-2xl"
-                    className="rounded-2xl"
+                    className="rounded-3xl"
                 />
 
                 <ul className="absolute top-0 w-full aspect-square rounded-2xl -z-10 p-4 list-disc list-inside marker:text-primary flex flex-col justify-center">
