@@ -50,7 +50,10 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                 </ul>
 
                 <div className="p-4 pt-8 flex flex-col items-start gap-2">
-                    <p className="font-bold text-lg line-clamp-1">
+                    <p
+                        className="font-bold text-lg line-clamp-1"
+                        role="heading"
+                    >
                         {recipe.name}
                     </p>
                     <p className="text-sm flex flex-wrap gap-2">
