@@ -25,4 +25,4 @@ function Img({ src, alt, className, classNameContainer }: ImgProps) {
     );
 }
 
-export default Img;
+export { Img };

@@ -1,6 +1,6 @@
 import { Recipe } from '@/interfaces';
-import Img from './Img';
-import Button from './Button';
+import { Img } from './Img';
+import { Button } from './Button';
 
 interface RecipeCardProps {
     recipe: Recipe;
@@ -73,4 +73,4 @@ function RecipeCard({ recipe }: RecipeCardProps) {
     );
 }
 
-export default RecipeCard;
+export { RecipeCard };

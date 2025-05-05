@@ -1,5 +1,5 @@
 import { recipes } from '@/dummyData';
-import RecipeCard from '@/components/RecipeCard';
+import { RecipeCard } from '@/components/RecipeCard';
 
 function HomePage() {
     return (
@@ -11,4 +11,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export { HomePage };

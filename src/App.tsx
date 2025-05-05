@@ -1,5 +1,5 @@
-import HomePage from '@/pages/HomePage.tsx';
-import Header from '@/components/Header.tsx';
+import { HomePage } from '@/pages/HomePage.tsx';
+import { Header } from '@/components/Header.tsx';
 
 function App() {
     return (
@@ -12,4 +12,4 @@ function App() {
     );
 }
 
-export default App;
+export { App };

@@ -13,4 +13,4 @@ function Button({ children, className }: ButtonProps) {
     );
 }
 
-export default Button;
+export { Button };
