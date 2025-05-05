@@ -8,10 +8,12 @@ function RecipeCard({ recipe }: RecipeCardProps) {
     return (
         <div className="p-8">
             <div className="relative bg-white text-black border-2 border-primary rounded-2xl flip-container">
-                <div className="flip-target relative w-full aspect-square">
+                <div className="shimmer flip-target relative w-full aspect-square bg-amber-300 scale-110 rounded-2xl">
                     <img
                         src={recipe.image}
-                        className="scale-110 rounded-2xl absolute w-full h-full"
+                        className="rounded-2xl absolute w-full h-full"
+                        style={{ opacity: 0 }}
+                        onLoad={(e) => (e.currentTarget.style.opacity = '1')}
                     />
                 </div>
 

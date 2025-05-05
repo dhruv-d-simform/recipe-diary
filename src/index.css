@@ -56,6 +56,21 @@ body::after {
 .flip-container:hover > .flip-target {
     transform-style: preserve-3d;
 
-    transform: translateY(-62%) rotateX(90deg);
+    transform: translateY(-56%) rotateX(90deg);
     transition-duration: 1s;
+}
+
+.shimmer {
+    background: linear-gradient(100deg, #e0e0e0 30%, #ffffff 50%, #e0e0e0 70%);
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
 }
