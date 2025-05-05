@@ -14,7 +14,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                     src={recipe.image}
                     alt={recipe.name}
                     classNameContainer="flip-target w-full aspect-square scale-110 rounded-2xl"
-                    className="rounded-3xl"
+                    className="rounded-3xl shadow-[#00000050] shadow-lg"
                 />
 
                 <ul className="absolute top-0 w-full aspect-square rounded-2xl -z-10 p-4 list-disc list-inside marker:text-primary flex flex-col justify-center">
