@@ -1,5 +1,6 @@
 import { Recipe } from '@/interfaces';
 import Img from './Img';
+import Button from './Button';
 
 interface RecipeCardProps {
     recipe: Recipe;
@@ -65,9 +66,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                         ))}
                     </p>
 
-                    <button className="px-4 py-1 font-semibold bg-primary text-white rounded-xl cursor-pointer">
-                        Recipe
-                    </button>
+                    <Button>Recipe</Button>
                 </div>
             </div>
         </div>
