@@ -1,6 +1,7 @@
 import { Recipe } from '@/interfaces';
 import { Img } from './Img';
 import { Button } from './Button';
+import { Rating } from './Rating';
 
 interface RecipeCardProps {
     recipe: Recipe;
@@ -66,7 +67,10 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                         ))}
                     </p>
 
-                    <Button>Recipe</Button>
+                    <div className="w-full flex justify-between items-center">
+                        <Rating rating={recipe.rating} />
+                        <Button>Recipe</Button>
+                    </div>
                 </div>
             </div>
         </div>
