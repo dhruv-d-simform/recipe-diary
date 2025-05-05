@@ -1,4 +1,5 @@
 import { Recipe } from '@/interfaces';
+import Img from './Img';
 
 interface RecipeCardProps {
     recipe: Recipe;
@@ -8,14 +9,11 @@ function RecipeCard({ recipe }: RecipeCardProps) {
     return (
         <div className="p-8">
             <div className="relative bg-white text-black border-2 border-primary rounded-2xl flip-container">
-                <div className="shimmer flip-target relative w-full aspect-square bg-amber-300 scale-110 rounded-2xl">
-                    <img
-                        src={recipe.image}
-                        className="rounded-2xl absolute w-full h-full"
-                        style={{ opacity: 0 }}
-                        onLoad={(e) => (e.currentTarget.style.opacity = '1')}
-                    />
-                </div>
+                <Img
+                    src={recipe.image}
+                    classNameContainer="flip-target w-full aspect-square scale-110 rounded-2xl"
+                    className="rounded-2xl"
+                />
 
                 <ul className="absolute top-0 w-full aspect-square rounded-2xl -z-10 p-4 list-disc list-inside marker:text-primary flex flex-col justify-center">
                     <li>
@@ -32,9 +30,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                     </li>
                     <li>
                         <span className="font-bold">Cuisine : </span>
-                        {recipe.cuisine === 'Pakistani'
-                            ? 'Indian'
-                            : recipe.cuisine}
+                        {recipe.cuisine}
                     </li>
                     <li>
                         <span className="font-bold">
