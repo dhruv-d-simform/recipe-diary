@@ -53,6 +53,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                     <p
                         className="font-bold text-lg line-clamp-1"
                         role="heading"
+                        aria-label={recipe.name}
                     >
                         {recipe.name}
                     </p>
