@@ -11,6 +11,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
             <div className="relative bg-white text-black border-2 border-primary rounded-2xl flip-container">
                 <Img
                     src={recipe.image}
+                    alt={recipe.name}
                     classNameContainer="flip-target w-full aspect-square scale-110 rounded-2xl"
                     className="rounded-2xl"
                 />
