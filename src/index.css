@@ -12,25 +12,26 @@ body {
 body::before,
 body::after {
     content: '';
-    width: 100%;
-    height: 35%;
+    width: 35%;
+    height: 100%;
     position: fixed;
-    left: 0;
+    bottom: -50%;
     z-index: -1;
 }
 
 body::before {
-    top: 0;
-    background: radial-gradient(ellipse at top, #fd5d6980, transparent 80%);
+    left: 0;
+    background: radial-gradient(ellipse at left, #fd5d6980, transparent 80%);
 }
 
 body::after {
-    bottom: 0;
-    background: radial-gradient(ellipse at bottom, #fd5d6980, transparent 80%);
+    right: 0;
+    background: radial-gradient(ellipse at right, #fd5d6980, transparent 80%);
 }
 
 .glassmorphic {
     backdrop-filter: blur(8px) contrast(1) saturate(1);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .grid-cols-auto-fit {

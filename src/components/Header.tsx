@@ -6,11 +6,11 @@ function Header() {
                 tabIndex={0}
             >
                 <img
-                    className="h-11"
+                    className="h-11 grayscale-100 contrast-200 saturate-200"
                     src="/logos/recipediary.png"
                     alt="Recipe Diary Logo"
                 />
-                <p role="heading" className="text-[#ffd086] text-2xl">
+                <p role="heading" className="text-white text-2xl">
                     RecipeDiary
                 </p>
             </div>
