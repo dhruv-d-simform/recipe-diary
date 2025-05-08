@@ -1,17 +1,17 @@
 import { Recipe } from '@/interfaces';
-import { Img } from './Img';
-import { Button } from './Button';
-import { Rating } from './Rating';
+import { RecipeImage } from './RecipeImage';
+import { Button } from '@/components/Button';
+import { RecipeRating } from './RecipeRating';
 
 interface RecipeCardProps {
     recipe: Recipe;
 }
 
-function RecipeCard({ recipe }: RecipeCardProps) {
+export function RecipeCard({ recipe }: RecipeCardProps) {
     return (
         <div className="p-8">
             <div className="relative bg-white text-black border-2 border-primary rounded-3xl flip-container">
-                <Img
+                <RecipeImage
                     src={recipe.image}
                     alt={recipe.name}
                     classNameContainer="flip-target w-full aspect-square scale-110 rounded-2xl"
@@ -68,7 +68,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                     </p>
 
                     <div className="w-full flex justify-between items-center">
-                        <Rating rating={recipe.rating} />
+                        <RecipeRating rating={recipe.rating} />
                         <Button>Recipe</Button>
                     </div>
                 </div>
@@ -76,5 +76,3 @@ function RecipeCard({ recipe }: RecipeCardProps) {
         </div>
     );
 }
-
-export { RecipeCard };

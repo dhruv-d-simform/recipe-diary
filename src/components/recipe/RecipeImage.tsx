@@ -1,13 +1,18 @@
 import { useState } from 'react';
 
-interface ImgProps {
+interface RecipeImageProps {
     src: string;
     alt: string;
     className: string;
     classNameContainer: string;
 }
 
-function Img({ src, alt, className, classNameContainer }: ImgProps) {
+export function RecipeImage({
+    src,
+    alt,
+    className,
+    classNameContainer,
+}: RecipeImageProps) {
     const [isLoaded, setIsLoaded] = useState(false);
     return (
         <div
@@ -24,5 +29,3 @@ function Img({ src, alt, className, classNameContainer }: ImgProps) {
         </div>
     );
 }
-
-export { Img };

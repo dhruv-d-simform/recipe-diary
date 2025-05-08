@@ -1,5 +1,5 @@
 import { recipes } from '@/MockData/recipe';
-import { RecipeCard } from '@/components/RecipeCard';
+import { RecipeCard } from '@/components/recipe/RecipeCard';
 
 function HomePage() {
     return (
