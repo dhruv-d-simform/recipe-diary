@@ -2,7 +2,7 @@ import { Recipe } from '@/types/recipe.types';
 import { RecipeImage } from './RecipeImage';
 import { Button } from '@/components/Button';
 import { RecipeRating } from './RecipeRating';
-import '@/styles/recipe.css';
+import recipeStyles from '@/styles/recipe.module.css';
 
 interface RecipeCardProps {
     recipe: Recipe;
@@ -11,11 +11,13 @@ interface RecipeCardProps {
 export function RecipeCard({ recipe }: RecipeCardProps) {
     return (
         <div className="p-8">
-            <div className="relative bg-white text-black border-2 border-primary rounded-3xl flip-container">
+            <div
+                className={`relative bg-white text-black border-2 border-primary rounded-3xl ${recipeStyles['flip-container']}`}
+            >
                 <RecipeImage
                     src={recipe.image}
                     alt={recipe.name}
-                    containerClassName="flip-target w-full aspect-square scale-110 rounded-2xl"
+                    containerClassName={`${recipeStyles['flip-target']} w-full aspect-square scale-110 rounded-2xl`}
                     className="rounded-3xl shadow-[#00000050] shadow-lg"
                 />
 

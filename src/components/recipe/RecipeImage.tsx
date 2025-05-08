@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import recipeStyle from '@/styles/recipe.module.css';
 
 interface RecipeImageProps {
     src: string;
@@ -16,7 +17,7 @@ export function RecipeImage({
     const [isLoaded, setIsLoaded] = useState(false);
     return (
         <div
-            className={`${isLoaded || 'shimmer'} relative ${containerClassName}`}
+            className={`${isLoaded || recipeStyle['shimmer']} relative ${containerClassName}`}
         >
             <img
                 src={src}
