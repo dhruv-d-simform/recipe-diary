@@ -1,4 +1,4 @@
-import { recipes } from '@/MockData/recipe';
+import { recipes } from '@/MockData/recipesMockData';
 import { RecipeCard } from '@/components/recipe/RecipeCard';
 import recipeStyles from '@/styles/recipe.module.css';
 
