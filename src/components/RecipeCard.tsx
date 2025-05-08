@@ -18,7 +18,7 @@ function RecipeCard({ recipe }: RecipeCardProps) {
                     className="rounded-3xl shadow-[#00000050] shadow-lg"
                 />
 
-                <ul className="overflow-y-auto absolute top-0 w-full aspect-square rounded-2xl -z-10 p-4 list-disc list-inside marker:text-primary flex flex-col justify-center">
+                <ul className="overflow-y-auto absolute top-0 w-full aspect-square rounded-2xl -z-10 p-4 pl-8 list-disc marker:text-primary flex flex-col justify-center">
                     <li>
                         <span className="font-bold">Meal Type : </span>
                         {recipe.mealType.join(', ')}
