@@ -1,4 +1,4 @@
-function Header() {
+export function Header() {
     return (
         <header className="z-50 w-full max-w-[100rem] m-auto h-16 fixed left-0 right-0 flex glassmorphic">
             <div
@@ -17,5 +17,3 @@ function Header() {
         </header>
     );
 }
-
-export { Header };

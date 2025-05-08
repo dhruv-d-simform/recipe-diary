@@ -1,7 +1,7 @@
 import { HomePage } from '@/pages/HomePage.tsx';
 import { Header } from '@/components/Header.tsx';
 
-function App() {
+export function App() {
     return (
         <div>
             <Header />
@@ -11,5 +11,3 @@ function App() {
         </div>
     );
 }
-
-export { App };

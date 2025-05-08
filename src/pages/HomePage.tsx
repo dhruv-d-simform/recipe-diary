@@ -1,7 +1,7 @@
 import { recipes } from '@/MockData/recipe';
 import { RecipeCard } from '@/components/recipe/RecipeCard';
 
-function HomePage() {
+export function HomePage() {
     return (
         <div className="grid grid-cols-auto-fit p-8 gap-8">
             {recipes.map((recipe) => (
@@ -10,5 +10,3 @@ function HomePage() {
         </div>
     );
 }
-
-export { HomePage };
