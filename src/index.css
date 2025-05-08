@@ -35,7 +35,8 @@ body::after {
 }
 
 .grid-cols-auto-fit {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 22rem));
+    place-content: center;
 }
 
 .flip-container {
