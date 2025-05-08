@@ -1,4 +1,4 @@
-import { recipes } from '@/dummyData';
+import { recipes } from '@/MockData/recipe';
 import { RecipeCard } from '@/components/RecipeCard';
 
 function HomePage() {
