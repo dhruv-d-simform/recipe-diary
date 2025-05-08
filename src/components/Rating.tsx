@@ -13,7 +13,7 @@ function Rating({ rating }: RatinProps) {
         <div className="flex justify-center items-center">
             {Array(5)
                 .fill(0)
-                .map(() => {
+                .map((_, i) => {
                     let icon = starHollowIcon;
                     if (ratingIterator >= 1) {
                         icon = starFilledIcon;
@@ -22,7 +22,14 @@ function Rating({ rating }: RatinProps) {
                     }
                     ratingIterator--;
 
-                    return <img src={icon} alt="Star Rating" className="h-5" />;
+                    return (
+                        <img
+                            src={icon}
+                            key={`Star Rating ${i}`}
+                            alt={`Star Rating ${i}`}
+                            className="h-5"
+                        />
+                    );
                 })}
 
             <p className="text-primary font-semibold ml-2">{rating}</p>
