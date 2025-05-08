@@ -14,7 +14,7 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
                 <RecipeImage
                     src={recipe.image}
                     alt={recipe.name}
-                    classNameContainer="flip-target w-full aspect-square scale-110 rounded-2xl"
+                    containerClassName="flip-target w-full aspect-square scale-110 rounded-2xl"
                     className="rounded-3xl shadow-[#00000050] shadow-lg"
                 />
 

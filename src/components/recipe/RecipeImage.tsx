@@ -4,19 +4,19 @@ interface RecipeImageProps {
     src: string;
     alt: string;
     className: string;
-    classNameContainer: string;
+    containerClassName: string;
 }
 
 export function RecipeImage({
     src,
     alt,
     className,
-    classNameContainer,
+    containerClassName,
 }: RecipeImageProps) {
     const [isLoaded, setIsLoaded] = useState(false);
     return (
         <div
-            className={`${isLoaded || 'shimmer'} relative ${classNameContainer}`}
+            className={`${isLoaded || 'shimmer'} relative ${containerClassName}`}
         >
             <img
                 src={src}
