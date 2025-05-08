@@ -4,11 +4,11 @@ import { Button } from '@/components/Button';
 import { RecipeRating } from './RecipeRating';
 import recipeStyles from '@/styles/recipe.module.css';
 
-interface RecipeCardProps {
+interface RecipeCardProp {
     recipe: Recipe;
 }
 
-export function RecipeCard({ recipe }: RecipeCardProps) {
+export function RecipeCard({ recipe }: RecipeCardProp) {
     return (
         <div className="p-8">
             <div
