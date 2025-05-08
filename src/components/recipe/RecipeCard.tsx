@@ -2,6 +2,7 @@ import { Recipe } from '@/types/recipe.types';
 import { RecipeImage } from './RecipeImage';
 import { Button } from '@/components/Button';
 import { RecipeRating } from './RecipeRating';
+import './recipe.css';
 
 interface RecipeCardProps {
     recipe: Recipe;
