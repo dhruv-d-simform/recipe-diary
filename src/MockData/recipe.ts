@@ -1,4 +1,4 @@
-import { Recipe } from '@/interfaces';
+import { Recipe } from '@/types/recipe.types';
 
 // Temporary data for UI creation.
 export const recipes: Array<Recipe> = [

@@ -1,4 +1,4 @@
-import { Recipe } from '@/interfaces';
+import { Recipe } from '@/types/recipe.types';
 import { RecipeImage } from './RecipeImage';
 import { Button } from '@/components/Button';
 import { RecipeRating } from './RecipeRating';
