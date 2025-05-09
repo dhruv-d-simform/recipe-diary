@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-primary: #fd5d69;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+body::before,
+body::after {
+    content: '';
+    width: 35%;
+    height: 100%;
+    position: fixed;
+    bottom: -50%;
+    z-index: -1;
+}
+
+body::before {
+    left: 0;
+    background: radial-gradient(ellipse at left, #fd5d6980, transparent 80%);
+}
+
+body::after {
+    right: 0;
+    background: radial-gradient(ellipse at right, #fd5d6980, transparent 80%);
+}
+
+.glassmorphic {
+    backdrop-filter: blur(8px) contrast(1) saturate(1);
+    background-color: rgba(0, 0, 0, 0.35);
+}
