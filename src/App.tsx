@@ -1,4 +1,4 @@
-import { HomePage } from '@/pages/HomePage.tsx';
+import { Outlet } from 'react-router';
 import { Header } from '@/components/Header.tsx';
 
 export function App() {
@@ -6,7 +6,7 @@ export function App() {
         <div>
             <Header />
             <div className="w-full max-w-[100rem] m-auto pt-16">
-                <HomePage />
+                <Outlet />
             </div>
         </div>
     );

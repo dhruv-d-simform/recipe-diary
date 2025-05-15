@@ -1,6 +1,7 @@
-import { Recipe } from '@/types/recipe.types';
-import { RecipeImage } from './RecipeImage';
+import { useNavigate } from 'react-router';
+import type { Recipe } from '@/types/recipe.types';
 import { Button } from '@/components/Button';
+import { RecipeImage } from './RecipeImage';
 import { RecipeRating } from './RecipeRating';
 import recipeStyles from '@/styles/recipe.module.css';
 
@@ -9,6 +10,8 @@ interface RecipeCardProp {
 }
 
 export function RecipeCard({ recipe }: RecipeCardProp) {
+    const navigate = useNavigate();
+
     return (
         <div className="p-8">
             <div
@@ -36,7 +39,9 @@ export function RecipeCard({ recipe }: RecipeCardProp) {
                     </li>
                     <li>
                         <span className="font-bold">Cuisine : </span>
-                        {recipe.cuisine}
+                        {recipe.cuisine === 'Pakistani'
+                            ? 'Indian'
+                            : recipe.cuisine}
                     </li>
                     <li>
                         <span className="font-bold">
@@ -63,16 +68,23 @@ export function RecipeCard({ recipe }: RecipeCardProp) {
                         {recipe.name}
                     </p>
                     <p className="text-sm flex flex-wrap gap-2">
-                        {recipe.tags.slice(0, 3).map((tag) => (
-                            <span key={tag} className="text-primary">
-                                #{tag}
-                            </span>
-                        ))}
+                        {recipe.tags.slice(0, 3).map((tag) => {
+                            tag = tag === 'Pakistani' ? 'Indian' : tag;
+                            return (
+                                <span key={tag} className="text-primary">
+                                    #{tag}
+                                </span>
+                            );
+                        })}
                     </p>
 
                     <div className="w-full flex justify-between items-center">
                         <RecipeRating rating={recipe.rating} />
-                        <Button>Recipe</Button>
+                        <Button
+                            onClick={() => navigate(`/recipe/${recipe.id}`)}
+                        >
+                            Recipe
+                        </Button>
                     </div>
                 </div>
             </div>
