@@ -11,7 +11,7 @@ import { RecipeDetails } from '@/pages/RecipeDetails';
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App />}>
-            <Route path="/" element={<HomePage />} />
+            <Route index element={<HomePage />} />
             <Route path="/recipe/:id" element={<RecipeDetails />} />
             <Route path="*" element={<NotFound />} />
         </Route>
