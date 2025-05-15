@@ -1,9 +1,9 @@
-import { Recipe } from '@/types/recipe.types';
-import { RecipeImage } from './RecipeImage';
+import { useNavigate } from 'react-router';
+import type { Recipe } from '@/types/recipe.types';
 import { Button } from '@/components/Button';
+import { RecipeImage } from './RecipeImage';
 import { RecipeRating } from './RecipeRating';
 import recipeStyles from '@/styles/recipe.module.css';
-import { useNavigate } from 'react-router';
 
 interface RecipeCardProp {
     recipe: Recipe;
