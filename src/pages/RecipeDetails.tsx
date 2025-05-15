@@ -5,13 +5,13 @@ import { NotFound } from './NotFound';
 export function RecipeDetails() {
     const { id } = useParams();
 
-    const idNum = Number(id);
+    const recipeId = Number(id);
 
-    if (!isFinite(idNum)) {
+    if (!isFinite(recipeId)) {
         return <NotFound />;
     }
 
-    const recipe = recipes.find((item) => item.id === idNum);
+    const recipe = recipes.find((item) => item.id === recipeId);
 
     if (!recipe) {
         return <NotFound />;
